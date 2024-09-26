@@ -3,6 +3,10 @@ import bobby from "../assets/bobbylogo-B_EK53mG.svg";
 import sanarip from "../assets/sanariplogo-CIZykREb.svg";
 import optima from "../assets/optimaBank-2_i4H76J.svg";
 import peaksoft from "../assets/peaksoft-C8CCj3bj.svg";
+import mer from "../assets/mer-DFDYaBFv.png";
+import jkm from "../assets/jkm-p75-xVKc.svg";
+import sharipa from "../assets/images/sharipa.jpg";
+import akbermet from "../assets/images/bermet.jpg";
 
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -26,26 +30,26 @@ function HomePage() {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col justify-center items-center text-center h-full text-white animate-fade-in">
-          <h1 className="text-6xl font-bold animate-pulse">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold animate-pulse">
             Мобилография 2024
           </h1>
-          <p className="mt-4 text-lg max-w-lganimate-fade-in-slow">
+          <p className="mt-4 text-sm sm:text-lg max-w-lg animate-fade-in-slow">
             Прими участие в крупнейшем турнире по мобилографии и прояви свой
             талант!
           </p>
 
           <div className="mt-10 text-center animate-fade-in-slow">
-            <h2 className="text-6xl font-bold text-blue-400 animate-bounce">
+            <h2 className="text-5xl sm:text-6xl font-bold text-blue-400 animate-bounce">
               300 000 СОМ
             </h2>
-            <p className="text-3xl font-semibold mt-2 text-yellow-400">
+            <p className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 text-yellow-400">
               ПРИЗОВОЙ ФОНД
             </p>
           </div>
 
           <button
             onClick={handleNavigate}
-            className="pointer mt-6 px-8 py-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition transform hover:scale-105 duration-200"
+            className="pointer mt-6 px-4 sm:px-6 md:px-8 py-2 sm:py-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition transform hover:scale-105 duration-200"
           >
             Подать заявку
           </button>
@@ -61,36 +65,68 @@ function HomePage() {
         <div className="relative z-10 container mx-auto px-6 text-center text-white">
           <h2 className="text-4xl font-bold">О турнире</h2>
           <p className="mt-4 max-w-3xl mx-auto">
-            Турнир по мобилографии — это ежегодное событие, где собираются
-            лучшие мобильные фотографы Центральной Азии для демонстрации своих
-            работ.
+            Развитие творческих навыков участников в области мобилографии,
+            популяризация мероприятия ITFEST 2024, создание сообщества
+            мобилографов и обмен опытом между участниками.
           </p>
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-20 bg-white">
+      {/* Competition Details Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-blue-500">Категории</h2>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-200">
-              <h3 className="text-2xl font-semibold">Портрет</h3>
+          <h2 className="text-4xl font-bold text-blue-500">
+            Этапы и подробности турнира
+          </h2>
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold">
+                3 этапа конкурсного отбора
+              </h3>
               <p className="mt-4 text-gray-600">
-                Покажи своё мастерство в мобильной портретной фотографии.
+                Пройди все 3 этапа отбора, чтобы достичь финала и показать свои
+                лучшие работы!
               </p>
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-200">
-              <h3 className="text-2xl font-semibold">Пейзаж</h3>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold">
+                3 темы для создания роликов
+              </h3>
               <p className="mt-4 text-gray-600">
-                Снимки природы, которые захватывают дух.
+                Темы будут опубликованы на странице Instagram:{" "}
+                <a
+                  href="https://www.instagram.com/itfest.kg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline"
+                >
+                  @itfest.kg
+                </a>
+              </p>
+              <a
+                href="https://www.instagram.com/itfest.kg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block px-6 py-2 bg-pink-500 text-white font-semibold rounded hover:bg-pink-600 transition"
+              >
+                Перейти в Instagram
+              </a>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-semibold">3 недели турнира</h3>
+              <p className="mt-4 text-gray-600">
+                Участники имеют 3 недели для подготовки и подачи своих роликов
+                на конкурс.
               </p>
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-200">
-              <h3 className="text-2xl font-semibold">Городская жизнь</h3>
-              <p className="mt-4 text-gray-600">
-                Уникальные моменты городской культуры и быта.
-              </p>
-            </div>
+          </div>
+
+          <div className="mt-10 bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+            <h3 className="text-2xl font-semibold">9 призовых мест</h3>
+            <p className="mt-4 text-gray-600">
+              Турнир предоставляет 9 призовых мест для лучших участников.
+              Поделитесь своим талантом и выиграйте призы!
+            </p>
           </div>
         </div>
       </section>
@@ -114,13 +150,49 @@ function HomePage() {
               Участвовать может каждый, абсолютно бесплатно.
             </p>
             <p className="text-lg font-light mb-4 animate-fade-in-slow">
-              Участники будут должны создать 30-секундный рекламный ролик о
-              банковской карте OptimaBank.
+              Участники должны создать 30-секундный рекламный ролик на заданную
+              тему.
             </p>
             <p className="text-lg font-light mb-4 animate-fade-in-slow">
               После завершения съемки рекламного ролика, нужно запостить его в
               медиа и отправить ссылку нам на сайт.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Organizers and Jury Section */}
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-blue-500">
+            Организаторы и Жюри
+          </h2>
+          <p className="mt-4 text-gray-600 text-lg">
+            Образовательный центр Peaksoft House
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8 w-full mx-auto  sm:w-[700px]">
+            <div className="bg-white p-6 rounded-lg shadow-lg ">
+              <img
+                src={sharipa}
+                alt="Байзакова Шарипа"
+                className="w-full object-cover rounded-lg"
+              />
+              <h3 className="text-xl font-semibold mt-4">Байзакова Шарипа</h3>
+              <p className="text-gray-600">Инструктор по мобилографии</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <img
+                src={akbermet}
+                alt="Ак-Бермет"
+                className="w-full object-cover rounded-lg"
+              />
+              <h3 className="text-xl font-semibold mt-4">
+                Русланова Ак-Бермет
+              </h3>
+              <p className="text-gray-600">Инструктор по маркетингу</p>
+            </div>
           </div>
         </div>
       </section>
@@ -131,22 +203,28 @@ function HomePage() {
           <h2 className="text-4xl font-bold text-center text-white">
             Наши Партнёры
           </h2>
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-7 gap-8">
             {/* Партнёры */}
             <div className="flex justify-center transform hover:scale-105 transition duration-200">
-              <img src={itfest} alt="Partner 1" className="h-20 w-60" />
+              <img src={itfest} alt="Partner 1" className="h-24 w-60" />
             </div>
             <div className="flex justify-center transform hover:scale-105 transition duration-200">
-              <img src={bobby} alt="Partner 2" className="h-20 w-60" />
+              <img src={bobby} alt="Partner 2" className="h-24 w-60" />
             </div>
             <div className="flex justify-center transform hover:scale-105 transition duration-200">
-              <img src={sanarip} alt="Partner 3" className="h-20 w-60" />
+              <img src={sanarip} alt="Partner 3" className="h-24 w-60" />
             </div>
             <div className="flex justify-center transform hover:scale-105 transition duration-200">
-              <img src={optima} alt="Partner 4" className="h-20 w-60" />
+              <img src={optima} alt="Partner 4" className="h-24 w-60" />
             </div>
             <div className="flex justify-center transform hover:scale-105 transition duration-200">
-              <img src={peaksoft} alt="Partner 5" className="h-20 w-60" />
+              <img src={peaksoft} alt="Partner 5" className="h-24 w-60" />
+            </div>
+            <div className="flex justify-center transform hover:scale-105 transition duration-200">
+              <img src={mer} alt="Partner 6" className="h-24 " />
+            </div>
+            <div className="flex justify-center transform hover:scale-105 transition duration-200">
+              <img src={jkm} alt="Partner 7" className="h-24 w-60" />
             </div>
           </div>
         </div>
