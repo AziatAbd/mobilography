@@ -1,5 +1,3 @@
-// RegistrationPage.tsx
-
 import React, { useState } from "react";
 
 interface FormData {
@@ -47,8 +45,6 @@ const RegistrationPage: React.FC = () => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      // Здесь можно добавить логику отправки данных на сервер
-
       await fetch(
         "http://ec2-3-127-247-177.eu-central-1.compute.amazonaws.com/api/mobilography",
         {
