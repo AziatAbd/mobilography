@@ -53,7 +53,7 @@ const RegistrationPage: React.FC = () => {
     if (Object.keys(validationErrors).length === 0) {
       try {
         const response = await fetch(
-          "http://ec2-3-127-247-177.eu-central-1.compute.amazonaws.com/api/mobilography",
+          "https://itfest.peaksoft.house/api/mobilography",
           {
             method: "POST",
             headers: {
